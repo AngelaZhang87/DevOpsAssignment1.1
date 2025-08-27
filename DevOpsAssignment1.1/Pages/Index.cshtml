@@ -4,7 +4,188 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple HTML Practice</title>
+    <style>
+        :root {
+            --bg: #fafafa;
+            --text: #222;
+            --muted: #666;
+            --card: #fff;
+            --border: #e5e5e5;
+            --accent: #2563eb;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        header {
+            padding: 24px 16px;
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+        }
+
+            header h1 {
+                margin: 0 0 4px;
+                font-size: 1.4rem
+            }
+
+            header p {
+                margin: 0;
+                color: var(--muted)
+            }
+
+        main {
+            max-width: 800px;
+            margin: 24px auto;
+            padding: 0 16px;
+        }
+
+        nav {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+            nav a {
+                text-decoration: none;
+                padding: 8px 12px;
+                border: 1px solid var(--border);
+                border-radius: 10px;
+                background: var(--card);
+                color: inherit
+            }
+
+        section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            margin: 0 0 8px;
+            font-size: 1.1rem
+        }
+
+        ul {
+            margin: 8px 0 0 20px
+        }
+
+        textarea, input, button {
+            font: inherit
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 8px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: #f7f7f7
+        }
+
+        .hint {
+            color: var(--muted);
+            font-size: .9rem
+        }
+
+        .row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .todo {
+            list-style: none;
+            padding: 0;
+            margin: 8px 0 0
+        }
+
+            .todo li {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 6px 0;
+                border-bottom: 1px dashed var(--border)
+            }
+
+                .todo li:last-child {
+                    border-bottom: none
+                }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--muted)
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DevOps Assignment 1</h1>
+        <p>Task 2 (no JavaScript, no backend).</p>
+    </header>
+
+    <main>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#notes">Notes</a>
+            <a href="#todo">To‑Do</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>Hello! This is a simple html to demonstrate effective use of a Source management system. </p>
+
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Static Portfolio</strong> </li>
+                <li><strong>Style Playground</strong> </li>
+                <li><strong>Semantics Exercise</strong> </li>
+            </ul>
+        </section>
+
+        <section id="notes">
+            <h2>Notes</h2>
+            <p class="hint">A simple text area. Content won’t be saved between reloads (no JS).</p>
+            <textarea placeholder="Write your notes here…"></textarea>
+        </section>
+
+        <section id="todo">
+            <h2>To‑Do</h2>
+            <p class="hint">Static checklist for practice.</p>
+            <ul class="todo" aria-label="Practice checklist">
+                <li><input type="checkbox" id="t1"><label for="t1">Create a new section</label></li>
+                <li><input type="checkbox" id="t2"><label for="t2">Change the accent color</label></li>
+                <li><input type="checkbox" id="t3"><label for="t3">Make the page accessible</label></li>
+                
+
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        © 2025 DevOps
+    </footer>
+</body>
+</html>
